@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-08-18T01:34:52 BDT" name="Default suite" finished-at="2023-08-18T01:35:08 BDT" duration-ms="15670">
+    <groups>
+    </groups>
+    <test started-at="2023-08-18T01:34:52 BDT" name="Default test" finished-at="2023-08-18T01:35:08 BDT" duration-ms="15670">
+      <class name="VerifyTitle">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:VerifyTitle@4562e04d]" started-at="2023-08-18T01:34:52 BDT" name="Setup" finished-at="2023-08-18T01:34:55 BDT" duration-ms="2639" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method signature="VerifyLoginTestValidEmail()[pri:1, instance:VerifyTitle@4562e04d]" started-at="2023-08-18T01:34:55 BDT" name="VerifyLoginTestValidEmail" finished-at="2023-08-18T01:35:03 BDT" duration-ms="8070" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyLoginTestValidEmail -->
+        <test-method signature="VerifyLoginTestInValidEmail()[pri:2, instance:VerifyTitle@4562e04d]" started-at="2023-08-18T01:35:03 BDT" name="VerifyLoginTestInValidEmail" finished-at="2023-08-18T01:35:07 BDT" duration-ms="4587" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyLoginTestInValidEmail -->
+        <test-method is-config="true" signature="CloseBrowser()[pri:0, instance:VerifyTitle@4562e04d]" started-at="2023-08-18T01:35:07 BDT" name="CloseBrowser" finished-at="2023-08-18T01:35:08 BDT" duration-ms="326" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseBrowser -->
+      </class> <!-- VerifyTitle -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
