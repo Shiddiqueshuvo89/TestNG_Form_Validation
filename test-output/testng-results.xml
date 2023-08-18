@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-18T16:55:59 BDT" name="Default suite" finished-at="2023-08-18T16:56:13 BDT" duration-ms="13404">
+  <suite started-at="2023-08-18T22:04:36 BDT" name="Default suite" finished-at="2023-08-18T22:05:10 BDT" duration-ms="34198">
     <groups>
     </groups>
-    <test started-at="2023-08-18T16:55:59 BDT" name="Default test" finished-at="2023-08-18T16:56:13 BDT" duration-ms="13404">
+    <test started-at="2023-08-18T22:04:36 BDT" name="Default test" finished-at="2023-08-18T22:05:10 BDT" duration-ms="34198">
       <class name="RegistrationValidation">
-        <test-method is-config="true" signature="Setup()[pri:0, instance:RegistrationValidation@2a3b5b47]" started-at="2023-08-18T16:55:59 BDT" name="Setup" finished-at="2023-08-18T16:56:08 BDT" duration-ms="8868" status="PASS">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:RegistrationValidation@3023df74]" started-at="2023-08-18T22:04:36 BDT" name="Setup" finished-at="2023-08-18T22:04:39 BDT" duration-ms="3430" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method signature="VerifyRegistration()[pri:1, instance:RegistrationValidation@2a3b5b47]" started-at="2023-08-18T16:56:08 BDT" name="VerifyRegistration" description="Registration" finished-at="2023-08-18T16:56:12 BDT" duration-ms="3582" status="PASS">
+        <test-method signature="VerifyRegistration()[pri:1, instance:RegistrationValidation@3023df74]" started-at="2023-08-18T22:04:39 BDT" name="VerifyRegistration" finished-at="2023-08-18T22:04:55 BDT" duration-ms="15832" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyRegistration -->
-        <test-method is-config="true" signature="CloseBrowser()[pri:0, instance:RegistrationValidation@2a3b5b47]" started-at="2023-08-18T16:56:12 BDT" name="CloseBrowser" finished-at="2023-08-18T16:56:13 BDT" duration-ms="917" status="PASS">
+        <test-method signature="VerifyRegistrationWithoutFirstName()[pri:2, instance:RegistrationValidation@3023df74]" started-at="2023-08-18T22:04:55 BDT" name="VerifyRegistrationWithoutFirstName" finished-at="2023-08-18T22:05:10 BDT" duration-ms="14903" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CloseBrowser -->
+        </test-method> <!-- VerifyRegistrationWithoutFirstName -->
       </class> <!-- RegistrationValidation -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
