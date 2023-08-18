@@ -1,22 +1,40 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-
 public class RegistrationValidation {
-	
 	
 WebDriver driver;
 	
 	@BeforeTest
-	public void Setup () {
+	public void Setup () throws InterruptedException {
 		
-		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
+		String browserName = "firefox";
+		
+		if (browserName.equals("chrome")) {
+			
+			driver = new ChromeDriver();
+			
+		} else if (browserName.equals("firefox")) {
+			
+			driver = new FirefoxDriver();
+			
+		} else if(browserName.equals("edge")) {
+			
+			driver = new EdgeDriver();
+			
+		}
+		
+		driver.manage().window().maximize();
+		Thread.sleep(2000);
+		//Open URL	
+		driver.get("https://tutorialsninja.com/demo/index.php?route=account/register");
+		Thread.sleep(2000);
 		
 	}
 	
@@ -29,9 +47,6 @@ WebDriver driver;
 	
 	@Test(priority=1, description="Registration")
 	public void VerifyRegistration () throws InterruptedException {
-		
-	driver.get("https://tutorialsninja.com/demo/index.php?route=account/register");
-	driver.manage().window().maximize();
 	
 	//Enter FirstName
 	driver.findElement(By.xpath("//*[@id=\"input-firstname\"]")).sendKeys("Shiddique");
@@ -45,7 +60,11 @@ WebDriver driver;
 	driver.findElement(By.xpath("//*[@id=\"input-password\"]")).sendKeys("123456");
 	//Enter Confirm Password
 	driver.findElement(By.xpath("//*[@id=\"input-confirm\"]")).sendKeys("123456");
-	Thread.sleep(5000);
+	Thread.sleep(2000);
+	
+	//Click Submit Button
+	driver.findElement(By.xpath("//*[@id=\"content\"]/form/div/div/input[2]")).click();
+	Thread.sleep(1000);
 	
     
     }

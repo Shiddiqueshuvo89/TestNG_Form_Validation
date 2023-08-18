@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-18T16:34:54 BDT" name="Default suite" finished-at="2023-08-18T16:35:04 BDT" duration-ms="10040">
+  <suite started-at="2023-08-18T16:55:59 BDT" name="Default suite" finished-at="2023-08-18T16:56:13 BDT" duration-ms="13404">
     <groups>
     </groups>
-    <test started-at="2023-08-18T16:34:54 BDT" name="Default test" finished-at="2023-08-18T16:35:04 BDT" duration-ms="10040">
+    <test started-at="2023-08-18T16:55:59 BDT" name="Default test" finished-at="2023-08-18T16:56:13 BDT" duration-ms="13404">
       <class name="RegistrationValidation">
-        <test-method is-config="true" signature="Setup()[pri:0, instance:RegistrationValidation@2a3b5b47]" started-at="2023-08-18T16:34:54 BDT" name="Setup" finished-at="2023-08-18T16:34:56 BDT" duration-ms="1891" status="PASS">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:RegistrationValidation@2a3b5b47]" started-at="2023-08-18T16:55:59 BDT" name="Setup" finished-at="2023-08-18T16:56:08 BDT" duration-ms="8868" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method signature="VerifyRegistration()[pri:1, instance:RegistrationValidation@2a3b5b47]" started-at="2023-08-18T16:34:56 BDT" name="VerifyRegistration" description="Registration" finished-at="2023-08-18T16:35:04 BDT" duration-ms="7790" status="PASS">
+        <test-method signature="VerifyRegistration()[pri:1, instance:RegistrationValidation@2a3b5b47]" started-at="2023-08-18T16:56:08 BDT" name="VerifyRegistration" description="Registration" finished-at="2023-08-18T16:56:12 BDT" duration-ms="3582" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyRegistration -->
-        <test-method is-config="true" signature="CloseBrowser()[pri:0, instance:RegistrationValidation@2a3b5b47]" started-at="2023-08-18T16:35:04 BDT" name="CloseBrowser" finished-at="2023-08-18T16:35:04 BDT" duration-ms="330" status="PASS">
+        <test-method is-config="true" signature="CloseBrowser()[pri:0, instance:RegistrationValidation@2a3b5b47]" started-at="2023-08-18T16:56:12 BDT" name="CloseBrowser" finished-at="2023-08-18T16:56:13 BDT" duration-ms="917" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CloseBrowser -->
