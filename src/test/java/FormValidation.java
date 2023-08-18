@@ -26,8 +26,8 @@ public class FormValidation {
 		
 	}
 	
-	@Test(priority=1)
-	public void VerifyLoginTestValidEmail () throws InterruptedException {
+	@Test(priority=1, description="Verify Login with Valid Email and Valid Password")
+	public void VerifyLoginWithValidEmailAndPassword () throws InterruptedException {
 		
 	driver.get("https://tutorialsninja.com/demo/index.php?route=account/login");
 	driver.manage().window().maximize();
@@ -42,8 +42,8 @@ public class FormValidation {
     
     }
 	
-	@Test(priority=2)
-	public void VerifyLoginTestInValidEmail () throws InterruptedException {
+	@Test(priority=2, description="Verify Login with Invalid Email and Valid Password")
+	public void VerifyLoginWithInValidEmail () throws InterruptedException {
 		
 	driver.get("https://tutorialsninja.com/demo/index.php?route=account/login");
 	driver.manage().window().maximize();
@@ -59,6 +59,44 @@ public class FormValidation {
 	Assert.assertTrue(actuwalWarningMessage.contains(expectedWarningMessage),"Expected Warning");
 	
     }
+	
+	
+	@Test(priority=3, description="Verify Login with Valid Email and Invalid Password")
+	public void VerifyLoginWithInvalidPassword () throws InterruptedException {
+		
+	driver.get("https://tutorialsninja.com/demo/index.php?route=account/login");
+	driver.manage().window().maximize();
+	driver.findElement(By.xpath("//*[@id=\"input-email\"]")).sendKeys("admin@gmail.com");
+	driver.findElement(By.xpath("//*[@id=\"input-password\"]")).sendKeys("abc");
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//*[@id=\"content\"]/div/div[2]/div/form/input")).click();
+	Thread.sleep(2000);
+	
+	String actuwalWarningMessage = driver.findElement(By.xpath("//*[@id=\"account-login\"]/div[1]")).getText();
+	System.out.println(actuwalWarningMessage);
+	String expectedWarningMessage = "Warning: No match for E-Mail Address and/or Password.";
+	Assert.assertTrue(actuwalWarningMessage.contains(expectedWarningMessage),"Expected Warning");
+	
+    }
+	
+	@Test(priority=4, description="Verify Login with Invalid Email and Invalid Password")
+	public void VerifyLoginWithInvalidEmailAndInvalidPassword () throws InterruptedException {
+		
+	driver.get("https://tutorialsninja.com/demo/index.php?route=account/login");
+	driver.manage().window().maximize();
+	driver.findElement(By.xpath("//*[@id=\"input-email\"]")).sendKeys("abcd");
+	driver.findElement(By.xpath("//*[@id=\"input-password\"]")).sendKeys("abc");
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//*[@id=\"content\"]/div/div[2]/div/form/input")).click();
+	Thread.sleep(2000);
+	
+	String actuwalWarningMessage = driver.findElement(By.xpath("//*[@id=\"account-login\"]/div[1]")).getText();
+	System.out.println(actuwalWarningMessage);
+	String expectedWarningMessage = "Warning: No match for E-Mail Address and/or Password.";
+	Assert.assertTrue(actuwalWarningMessage.contains(expectedWarningMessage),"Expected Warning");
+	
+    }
+	
 	
 	
 }
