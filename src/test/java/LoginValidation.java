@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class FormValidation {
+public class LoginValidation {
 	
 	WebDriver driver;
 	
@@ -59,7 +59,6 @@ public class FormValidation {
 	Assert.assertTrue(actuwalWarningMessage.contains(expectedWarningMessage),"Expected Warning");
 	
     }
-	
 	
 	@Test(priority=3, description="Verify Login with Valid Email and Invalid Password")
 	public void VerifyLoginWithInvalidPassword () throws InterruptedException {
